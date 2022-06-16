@@ -1,0 +1,46 @@
+#carouselExampleIndicators{
+    margin-top: 100px;
+}
+.btn-outline-success{
+    color: red;
+    border-color: red;
+}
+.btn-outline-success:hover{
+    background-color: red;
+    color: white;
+    border-color: red;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: green;
+    color: red;
+}
+.btn-dark:hover{
+    background-color: red;
+}
+footer{
+    background-color: black;
+    color: white;
+}
+.first-line {
+    color: white;
+    border-bottom: 1px solid #392d23;}
+    .second-line a{
+        color: white;
+        text-decoration: none;
+    }
+    .third-line{
+        display: none;
+    }
+    @media screen and (max-width: 48rem){
+        .first-line{
+            text-align: center;
+        }
+        .second-line{
+            padding-left: 2rem;
+            padding-right: 2rem;
+            border-bottom: 1px solid #392d23;
+        }
+        .third-line{
+            display: block;
+        }
+    }
