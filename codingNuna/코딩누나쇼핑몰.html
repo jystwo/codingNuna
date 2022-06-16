@@ -12,7 +12,19 @@
     <title>shoppingmall</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <header>
+        <div class="top">
+            <button><a href="#">로그인</a></button>
+            <a href="#">회원가입</a>
+            <a href="#">마이페이지</a>
+            <a href="#">카트</a>
+            <a href="#">배송조회</a>
+            <a href="#">즐겨찾기</a>
+            <a href="#">블로그</a>
+        </div>
+    </header>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="http://bluecherry.co.kr/BlueCherry/WebImg/Common/TopLogo.jpg"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -49,33 +61,49 @@
             </div>
         </div>
     </nav>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100025.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100068.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100023.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
+    <div class="main container">
+        <div class="row">
+        <div class="col-md-8 col-sm-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100025.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100068.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100023.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+        <div class="main-second">
+            <div>
+                <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100005.jpg" width="100%">
+            </div>
+            <div>
+                <img src="http://bluecherry.co.kr/Images/ImgData/Banner/BannerImg100006.jpg" width="100%">
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
     <div class="text-center mt-5 mb-5">
         <h2>명품화장품 전문몰 블루체리</h2>
         <p>화장품 화장품 화장품</p>

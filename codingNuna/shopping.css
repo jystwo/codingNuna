@@ -1,5 +1,5 @@
-#carouselExampleIndicators{
-    margin-top: 100px;
+.main{
+    margin-top: 110px;
 }
 .btn-outline-success{
     color: red;
@@ -43,4 +43,30 @@ footer{
         .third-line{
             display: block;
         }
+        .top{
+            display: none;
+        }
     }
+
+
+.main-second div{
+    border: 1px solid gray;
+    margin: 5px 0px;
+    
+}
+header{
+    height: 1.5rem;
+    
+}
+.top{
+    text-align: end;
+    margin-right: 5rem;
+    font-size: 0.7rem;
+}
+.top a{
+    text-decoration: none;
+    color: gray;
+    margin: 5px;
+}
+
+
