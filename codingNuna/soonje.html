@@ -1,0 +1,19 @@
+<script>
+  for(n = 1; n < 1000; n++){
+    let number = String(n);
+    let vv = '';
+    
+    for(n2 = 0; n2 < number.length; n2++){
+      if(number[n] == '3' || number[n2] == '6' || number[n2] == '9'){
+        vv += '짝';
+      }
+    }
+    if(vv == ''){
+      console.log(n);
+    }else{
+      console.log(vv);
+    }
+  }
+
+  
+</script>
