@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    
+    position: relative;
+    background-image: url(image/숫자이미지.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    
+}
+
+.container{
+    border: 10px solid white;
+    border-radius: 20px;
+    position: absolute;
+    top: 18rem;
+    left: 2rem;
+    width: fit-content;
+    
+}
