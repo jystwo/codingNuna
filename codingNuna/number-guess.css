@@ -4,7 +4,7 @@ body{
     position: relative;
     background-image: url(image/숫자이미지.webp);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     
     
 }
