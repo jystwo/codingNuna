@@ -59,7 +59,7 @@ if(list[i].isComplete == true){
 
 function toggleComplete(id){
     for(let i = 0;i<taskList.length;i++){
-        if(taskList[i].id == id){
+        if(taskList[i].id === id){
             taskList[i].isComplete= !taskList[i].isComplete;
             break;
         }
@@ -70,7 +70,7 @@ function toggleComplete(id){
 
 function deleteTask(id){
     for(let i = 0;i<taskList.length;i++){
-        if(taskList[i].id == id){
+        if(taskList[i].id === id){
             taskList.splice(i,1);
             break;
         }

@@ -1,0 +1,116 @@
+<html>
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Todo List</h1>
+    <br>
+    <input id="input1">
+    <button id="add_button">추가</button>
+    <br>
+    <button id="all_button">모두</button>
+    <button id="ing_button">진행중</button>
+    <button id="end_button">끝남</button>
+    <table class="table  table-striped">
+      <thead>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </thead>
+
+      <tbody id="table1">
+
+      </tbody>
+    </table>
+
+
+    <script>
+      let total = {};
+      let counter = 0;
+      let status = 1;
+      let stauts2 = 1;
+      $("#add_button").click(function(){
+        let vv = $("#input1").val()
+        let vv2 = '<tr id="'+counter+'-row"><td colspan="2">'+vv+'</td><td class="d-flex flex-row-reverse"><button onclick="end_robot('+counter+')">끝남</button><button onclick="delete_robot('+counter+')">삭제</button></td></tr>'
+        let vv3 = '<tr id="'+counter+'-row"><td>'+vv+'</td><td><button style="color:red;" onclick="end_robot('+counter+')">끝남</button><button onclick="delete_robot('+counter+')">삭제</button></td></tr>'
+        total[counter] = [vv2, 1, vv3];  
+        $("#table1").append(vv2);
+        counter += 1;
+      })
+
+      function end_robot(id){
+        if(status != 1){
+          $("tr").remove("#"+id+'-row');
+        }
+        if(total[id][1] == 1){
+          total[id][1] = 0;
+        }else{
+          total[id][1] = 1;
+        }
+        $("#table1").html('');
+        $.each(total,function(id,value){
+            if(status == 1){
+              if(value[1] == 1){
+                $("#table1").append(value[0]);
+              }else{
+                $("#table1").append(value[2]);
+              }
+            }else if(status2 == 1){
+              if(value[1] == 1){
+                $("#table1").append(value[0]);
+              }
+            }else if(status2 == 0){
+              if(value[1] == 0){
+                $("#table1").append(value[2]);
+              }
+            }
+        })
+      }
+
+      function delete_robot(id){
+        delete total[id];
+        $("tr").remove("#"+id+'-row');
+      }
+
+      $("#ing_button").click(function(){
+        status2 = 1;
+        status = 0;
+        $("#table1").html('');
+        $.each(total,function(id,value){ 
+          if(value[1] == 1){
+            $("#table1").append(value[0]);
+          }
+        })
+      })
+
+      $("#end_button").click(function(){
+        status2 = 0;
+        status = 0;
+        $("#table1").html('');
+        $.each(total,function(id,value){ 
+          if(value[1] == 0){
+            $("#table1").append(value[2]);
+          }
+        })
+      })
+
+      $("#all_button").click(function(){
+        status = 1;
+        $("#table1").html('');
+        $.each(total,function(id,value){
+            if(value[1] == 1){
+              $("#table1").append(value[0]);
+            }else{
+              $("#table1").append(value[2]);
+            }
+        })
+      })
+
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
