@@ -6,7 +6,7 @@ let filterList =[];
 let mode = "all";
 
 addButton.addEventListener("click", addTask);
-taskInput.addEventListener("focus",function(){taskInput.value=""});
+
 
 
 for(let i =1;i<taps.length;i++){
@@ -23,7 +23,7 @@ function addTask(){
         isComplete:false
     };
     taskList.push(task);
-    
+    taskInput.value="";
     render();
 }
 
@@ -86,7 +86,7 @@ function filter(event){
     
     
     if(mode == "all"){
-        render()
+        
     } else if(mode === "ongoing"){
         for(let i =0;i<taskList.length;i++){
             if(taskList[i].isComplete == false){
@@ -94,15 +94,16 @@ function filter(event){
             } 
         }
         
-        render();
+        
     } else if(mode === "done"){
         for(let i =0;i<taskList.length;i++){
             if(taskList[i].isComplete == true){
                 filterList.push(taskList[i]);
             }
         }
-    render();
+    
     }
+    render()
 }
 
 function randomIDGenerate(){
