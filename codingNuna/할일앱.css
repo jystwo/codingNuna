@@ -3,14 +3,18 @@ body{
     background-image: url("image/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .container{
     background-color: white;
+    max-width: 800px;
+    height: 100%;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .task-area{
     border: 1px solid lightgray;
+    
 }
 
 .task-taps{
@@ -33,5 +37,44 @@ body{
 .task{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    height: 56px;
+}
+.task-done{
+    
+    text-decoration: line-through;
+    background-color: lightgray;
+    
+}
+.task button{
+    border: none;
+    width: 5rem;
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    
+}
+.task button:first-child:hover{
+    background-color: greenyellow;
+}
+.task button:nth-child(2):hover {
+    background-color: rgb(255, 0, 0, 0.3);
+}
+.fa-check{
+    color: limegreen;
+}
+.fa-trash-can{
+    color: red;
+}
+.button-box{
+    display: flex;
+}
+.task span{
+    padding: 1em;
+    
+}
+.task-taps div{
+    cursor: pointer;
 }
