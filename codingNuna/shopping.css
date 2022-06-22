@@ -74,5 +74,12 @@ header{
     margin-bottom: 10px;
 }
 
+.itemlist .card:hover{
+    border-color: red;
+    border-width: 0.3rem;
+}
 
-
+.itemlist .card-title{
+    font-size: 15px;
+    font-weight: 1000;
+}
