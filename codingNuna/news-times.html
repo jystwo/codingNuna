@@ -10,28 +10,54 @@
     <script src="https://kit.fontawesome.com/dbb376a4c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="side-menu" id="mySidenav">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="side-menu-list" id="menu-list">
+            <button>Sport</button>
+            <button>Tech</button>
+            <button>World</button>
+            <button>Finance</button>
+            <button>Politics</button>
+            <button>Business</button>
+            <button>Economics</button>
+            <button>Entertainment</button>
+            <button>Beauty</button>
+            <button>Travel</button>
+            <button>Music</button>
+            <button>Food</button>
+            <button>Science</button>
+            <button>Gaming</button>
+            <button>Energy</button>
+        </div>
+        
+    </div>
+    <div class="hide-icon"><i class="fas fa-bars hide icon-button" onclick="openNav()"></i></div>
+    <i class="fas fa-search icon-button" onclick="openSearchBox()"></i>
+                <span id="input-area">
+                    <input type="text" id="search-input" placeholder="search" />
+                    <button class="search-button" onclick="searchNews()">Go</button>
+                </span>
     <section class="container">
         <section>
             <div class="head-line">
                 <img src="https://bloximages.chicago2.vip.townnews.com/hartfordcitynewstimes.com/content/tncms/custom/image/4b9879ba-741e-11e5-8878-d3dc6bef402c.jpg?resize=600%2C315"> 
             </div>
             <div class="menus">
-                <nav class="navbar navbar-expand-lg bg-light">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link" href="#">Home</a>
-                            <a class="nav-link" href="#">Features</a>
-                            <a class="nav-link" href="#">Pricing</a>
-                            <a class="nav-link" href="#">Disabled</a>
-                        </div>
-                        </div>
-                    </div>
-                </nav>
+                <button>Sport</button>
+                <button>Tech</button>
+                <button>World</button>
+                <button>Finance</button>
+                <button>Politics</button>
+                <button>Business</button>
+                <button>Economics</button>
+                <button>Entertainment</button>
+                <button>Beauty</button>
+                <button>Travel</button>
+                <button>Music</button>
+                <button>Food</button>
+                <button>Science</button>
+                <button>Gaming</button>
+                <button>Energy</button>
             </div>
         </section>
         <section>

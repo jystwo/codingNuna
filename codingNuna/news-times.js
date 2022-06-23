@@ -1,5 +1,22 @@
 let news = []
 
+const openNav = () => {
+    document.getElementById("mySidenav").style.width = "250px";
+    };
+
+const closeNav = () => {
+document.getElementById("mySidenav").style.width = "0";
+};
+
+const openSearchBox = () => {
+let inputArea = document.getElementById("input-area");
+if (inputArea.style.display === "inline") {
+    inputArea.style.display = "none";
+} else {
+    inputArea.style.display = "inline";
+}
+};
+
 const getLatestNews = async()=>{
     let url = new URL(`https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&topic=business&page_size=10`);
     
@@ -13,4 +30,5 @@ const getLatestNews = async()=>{
 };
 
 getLatestNews();
+
 
