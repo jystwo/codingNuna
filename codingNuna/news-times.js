@@ -1,4 +1,7 @@
 let news = []
+let menus = document.querySelectorAll(".menus button")
+menus.forEach(menu=> menu.addEventListener("click", (event)=>getNewsByTopic(event)))
+
 
 const openNav = () => {
     document.getElementById("mySidenav").style.width = "250px";
@@ -29,6 +32,17 @@ const getLatestNews = async()=>{
 
     render()
     
+};
+
+const getNewsByTopic = async(event)=>{
+    let topic = event.target.textContent.toLowerCase()
+    let url = new URL(`https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&page_size=10&topic=${topic}`)
+    let header = new Headers({"x-api-key":"OuwSM5AQS1ndhDXqIzK6rOAyiYGS97os2V_0Kf7psfw"});
+    let response = await fetch(url,{headers:header});
+    let data = await response.json();
+    news = data.articles
+    render();
+    console.log("토픽뉴스",data)
 };
 
 const render = ()=>{
