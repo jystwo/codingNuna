@@ -31,12 +31,16 @@
         </div>
         
     </div>
-    <div class="hide-icon"><i class="fas fa-bars hide icon-button" onclick="openNav()"></i></div>
-    <i class="fas fa-search icon-button" onclick="openSearchBox()"></i>
+    <span class="top-menu">
+        <div class="hide-icon"><i class="fas fa-bars hide icon-button" onclick="openNav()"></i></div>
+        <div class="set-search">
+        <i class="fas fa-search icon-button" onclick="openSearchBox()"></i>
                 <span id="input-area">
                     <input type="text" id="search-input" placeholder="search" />
                     <button class="search-button" onclick="searchNews()">Go</button>
                 </span>
+        </div>
+    </span>
     <section class="container">
         <section>
             <div class="head-line">
@@ -60,7 +64,7 @@
                 <button>Energy</button>
             </div>
         </section>
-        <section>
+        <section id="news-board">
             <div class="row">
                 <div class="col-lg-4">
                     <img  class="news-image-size" src="https://png.pngtree.com/background/20210712/original/pngtree-modern-double-color-futuristic-neon-background-picture-image_1181573.jpg">
@@ -83,5 +87,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="news-times.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
 </body>
 </html>

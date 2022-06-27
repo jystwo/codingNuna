@@ -32,6 +32,7 @@
 }
 .row{
     margin-top: 1rem;
+    border-bottom: 1px solid black;
 }
 
 .side-menu{
@@ -89,4 +90,12 @@
     background-color: beige;
     border-radius: 3px;
     }
+}
+.top-menu{
+    display: flex;
+    position: relative;
+}
+.set-search{
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
