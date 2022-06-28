@@ -2,6 +2,8 @@ let news = []
 let menus = document.querySelectorAll(".menus button")
 menus.forEach(menu=> menu.addEventListener("click", (event)=>getNewsByTopic(event)))
 
+let searchButton = document.getElementById("search-button")
+
 
 const openNav = () => {
     document.getElementById("mySidenav").style.width = "250px";
@@ -45,6 +47,16 @@ const getNewsByTopic = async(event)=>{
     console.log("토픽뉴스",data)
 };
 
+const getNewsByKeyword = async()=>{
+    let keyword = document.getElementById("search-input").value;
+    let url = new URL(`https://api.newscatcherapi.com/v2/search?q=${keyword}&page_size=10`)
+    let header = new Headers({"x-api-key":"OuwSM5AQS1ndhDXqIzK6rOAyiYGS97os2V_0Kf7psfw"});
+    let response = await fetch(url,{headers:header});
+    let data = await response.json();
+    news = data.articles
+    render();
+}
+
 const render = ()=>{
     let newsHTML = '';
     newsHTML = news.map(item=>{
@@ -73,7 +85,7 @@ const render = ()=>{
 
     document.getElementById("news-board").innerHTML=newsHTML
 }
-
+searchButton.addEventListener("click",getNewsByKeyword)
 getLatestNews();
 
 
