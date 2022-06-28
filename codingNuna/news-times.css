@@ -99,3 +99,8 @@
     margin-top: 2rem;
     margin-left: 2rem;
 }
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
